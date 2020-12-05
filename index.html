@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/temlplate_front.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<?php 
+		session_start();
+		include('connexion/cn.php'); 
+?>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Logisti ">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>Logisti</title>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:400,700%7cWork+Sans:400,600,700&display=swap">
+  <link rel="stylesheet" href="css/libraries.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- =========================
+        Header
+    =========================== -->
+    <header id="header" class="header header-transparent">
+      <nav class="navbar navbar-expand-lg" style="background-color: #ff5e143b">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo/logo-light.png" class="logo-light" alt="logo">
+            <img src="images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+        <!-- /.header-top-right -->
+			<div class="header__top-right d-none d-lg-block">
+            <ul class="list-unstyled d-flex justify-content-end align-items-center">
+              <li><i class="icon-phone"></i><span>+55 654 541 17</span></li>
+              <li>
+
+              </li>
+              <li><a href="devis.php" class="btn btn__white"><i class="icon-list"></i><span>demande de devis</span></a></li>
+			  
+            </ul>
+          </div>
+			
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item with-dropdown">
+                <a href="index.php" class="dropdown-toggle nav__item-link active">Acceuil</a>
+                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                 
+              </li><!-- /.nav-item -->
+				              <li class="nav__item with-dropdown">
+                <a href="presentation.php" class="dropdown-toggle nav__item-link ">presentation</a>
+                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                 
+              </li>
+              <li class="nav__item with-dropdown">
+                <a  href="#" class="dropdown-toggle nav__item-link">types de conteneur</a>
+                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="conteneurs_std.php" class="nav__item-link">standars</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="conteneurs_spec.php" class="nav__item-link">Spécifiques</a></li>
+               
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+  
+				
+				<li class="nav__item with-dropdown ">
+                <a href="#" class="dropdown-toggle nav__item-link">Services</a>
+                <i class="fa fa-angle-right" data-toggle="dropdown" aria-expanded="true"></i>
+                <ul class="dropdown-menu ">
+                  <li class="nav__item"><a href="transformatin.php" class="nav__item-link">Amenagement et transformation</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="transport.php" class="nav__item-link">Transport</a></li>
+					 <li class="nav__item"><a href="location.php" class="nav__item-link">Location</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li>
+             
+             
+      
+              
+              <li class="nav__item">
+                <a href="contacs.php" class="nav__item-link">Contact </a>
+              </li><!-- /.nav-item -->
+				
+				<?php
+					if (isset($_SESSION['ADMIN'])){
+						if ($_SESSION['ADMIN']=="admin")
+				{?>
+				<li class="nav__item">
+               		 <a href="lst_con.php" class="nav__item-link">Liste des contacts </a>
+             	 </li><!-- /.nav-item -->
+				<li class="nav__item">
+               		 <a href="lst_dev.php" class="nav__item-link">Liste des devis </a>
+              	</li><!-- /.nav-item -->
+				
+				<?php } }?>
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+	  
+	  
+	  <!-- InstanceBeginEditable name="EditRegion3" -->
+	  
+	 
+	  <section id="slider1" class="slider slider-1">
+      <div class="owl-carousel thumbs-carousel carousel-arrows" data-slider-id="slider1" data-dots="false"
+        data-autoplay="true" data-nav="true" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="images/fond-accueil-cubner.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-8">
+                <div class="slide__content"><br><br><br>
+                  <h4 class="slide__title"; style="font-size:58px">LE CONTAINER  <span style="color:salmon; font-size:36px"><br>NOUVELLE DÉFINITION</span></h4>
+                  <p class="slide__desc">Vente de conteneurs maritimes neufs et d’occasions à destination des professionnels et des particuliers.</p><br>
+				  <br><br><br><br><br><br>
+<div class="container" >
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12  d-none d-lg-block">
+            <div class="owl-thumbs thumbs-dots" data-slider-id="slider1"lign="right">
+              <button class="owl-thumb-item" style="HEIGHT: 173PX;">
+                <img src="images\logo-accueil-1.png" style="    height: 50px; width: 50PX;">
+                <span style="font-size:12px">Un service  <br> Global</span>
+              </button>
+              <button class="owl-thumb-item"  style="HEIGHT: 173PX;">
+           <div class="counter__icon"><img src="images\logo-accueil-2.png " style="    height: 50px; width: 50PX;"></div>
+                <span style="font-size:12px">Négocier pour vous le meilleur rapport qualité/prix</span>
+              </button>
+              <button class="owl-thumb-item"   style="HEIGHT: 173PX;">
+                <img src="images\logo-accueil-3.png" style="    height: 50px; width: 50PX;">
+                <span style="font-size:12px">Pérénité, Robustesse & Sécurité des containers</span>
+              </button>
+              
+            </div><!-- /.owl-thumbs -->
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.slider -->
+
+		<br>
+		<div class="heading text-center mb-50">
+             <h2 class=""><span style="color:orange">LA GAMME</span><span style="color:#333"> CUBNER</span></h2>
+              <div class="divider__line divider__white divider__center"></div>
+            </div>
+		
+		<br>
+
+
+
+
+	   
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-lg-8 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+		<div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="service-item">
+              <div class="service__img">
+                <img src="images/menu-cont-1.jpg" alt="menu" class="img-fluid">
+              </div><!-- /.service-img -->
+              <div class="service__overlay">
+                
+                <h4 class="service__title" style="color:red">STANDARD</h4>
+                
+              </div>
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="service-item">
+              <div class="service__img">
+                <img src="images/menu-cont-2.jpg" alt="menu" class="img-fluid">
+              </div><!-- /.service-img -->
+              <div class="service__overlay">
+             
+                <h4 class="service__title"style="color:red">FRIGORIFIQUES</h4>
+                
+              </div>
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="service-item">
+              <div class="service__img">
+                <img src="images/menu-cont-3.jpg" alt="menu" class="img-fluid">
+              </div><!-- /.service-img -->
+              <div class="service__overlay">
+                
+                <h4 class="service__title"style="color:red">SPÉCIFIQUES</h4>
+                
+              </div>
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        
+      </div><!-- /.container -->
+    </section><!-- /.Services -->
+	 
+	 
+	 
+	 <section id="about4" class="about about-2 about-4 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <div class="row heading heading-2">
+              <div class="col-sm-12 col-md-12 col-sm-12">
+                <h2 class="heading__title" Style="color:orange">LE CONTAINER MARITIME</h2>
+              </div><!-- /.col-lg-12 -->
+              <div class="col-sm-12 col-md-7 col-lg-7">
+			  <h4>ADAPTÉ À VOS BESOINS</h4>
+                <p class="heading__desc mb-30">Vous avez un besoin temporaire ou permanent de stockage ? Vous souhaitez équiper votre chantier, votre jardin, votre société d’une surface étanche, sécurisée et facilement transportable ?</p>
+                
+                
+              </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.col-lg-7 -->
+          <div class="col-sm-12 col-md-9 col-lg-5">
+            <div class="about__img mb-60">
+              <img src="images/ligne-1-container.jpg" alt="about img" class="img-fluid">
+              
+            </div><!-- /.about-img -->
+          </div><!-- /.col-lg-5 -->
+		  
+		   <div class="col-sm-12 col-md-4 col-lg-8">
+			<img src="images/ligne-2-container.jpg" alt="singnture" class="signature mb-30">
+		   </div>
+		  
+		   <div class="col-sm-12 col-md-4 col-lg-4">
+				<ul>
+				<br><br>
+						<img src="images/puce-image.jpg"> &nbsp;&nbsp;  Cabane chantier TP</li><br>
+	                       
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Bureaux professionnels</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Maison /Loft<br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Évènementiel</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Restaurant</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Gardes meubles</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Datacenter</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Abris de jardin</li><br>
+					<img src="images/puce-image.jpg"> &nbsp;&nbsp; Station Service</li><br>
+					
+				</ul>
+		   </div>
+		  
+		  
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About 4 -->
+	 
+	 
+	  <section id="services" class="services pt-0 bg-gray">
+      <div class="container">
+        <div class="row heading mb-40">
+          <div class="heading text-center mb-50" >
+             <h1 class=""><span style="color:orange">LES ATOUTS</span><span style="color:orange"> DES CONTAINERS</span><span style="color:orange"> CUBNER</span></h1>
+              <div class="divider__line divider__white divider__center"></div>
+            </div>
+          
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+           
+              
+			  
+                <p class="service__desc">
+				<ul>
+				<img src="images/check-puce (1).png" >&nbsp; Sécurisé et étanche</li><br>
+				<img src="images/check-puce (1).png" >&nbsp; Transport facile et sans limite</li><br>
+
+			<img src="images/check-puce (1).png" >&nbsp; Solution stockage idéale et flexible</li><br>
+
+				<img src="images/check-puce (1).png" >&nbsp; Volume important de stockage</li><br>
+				<img src="images/check-puce (1).png" >&nbsp; Résistant aux effractions</li><br>
+				<img src="images/check-puce (1).png" >&nbsp; ... et bien plus encore !</li><br>
+</p>
+                
+              
+         
+          </div><!-- /.col-lg-4 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="service-item">
+              <div class="service__img">
+                <img src="images\menu-cont-1.jpg" width="25%" alt="service" class="img-fluid">
+              </div><!-- /.service-img -->
+              <div class="service__overlay">
+              
+               
+                
+              </div>
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="service-item">
+              	  
+                <p class="service__desc">
+				<ul>
+				<li >Cubner vous propose une gamme complète de containers vides ou aménagés. 
+				Vous pouvez entièrement personnaliser votre container : peinture, pose de votre logo, ajout d’une climatisation…
+				</li><br>
+				<li>Notre équipe vous accompagne étape par étape dans la conception et le développement de votre projet.</li><br>
+				<li>En plus de s’adapter à la marchandise, les conteneurs ont l’énorme avantage de pouvoir être 
+				transportés aussi bien par bateau, que par train ou par camion.</li><br>
+				<li>Une structure rigide qui s'adapte à toutes les situations.</li><br>
+
+				
+</p>
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+   
+
+	</section><!-- /.slider -->
+	
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+				<h4 class="slide__title"; style="font-size:30px" style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LES ENGAGEMENTS CUBNER </h4>
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-4">
+							<img src="images\engagement-1.png ">
+							 <p class="counter__desc">Un service Global</p>
+						</div>
+						<div class="col-md-4">
+							<img src="images\engagement-2.png  ">
+							<p class="counter__desc">Négocier le meilleur rapport<br>qualité/prix</p>
+						</div>
+						<div class="col-md-4">
+							<img src="images\engagement-3.png">
+							<p class="counter__desc">Pérennité, Robustesse<br>& Sécurité des containers</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+		</div>	
+	  
+	  
+	  
+	  
+	  <!-- InstanceEndEditable -->
+
+
+    <footer id="footer" class="footer footer-1" style="background-color:#ff5e143b">
+      <!-- /.footer-top -->
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg-9">
+              <div class="footer__copyright">
+                <nav>
+                  <ul class="list-unstyled footer__copyright-links d-flex flex-wrap">
+                    <li><b style="color:#333">Logisti 2020</b></li>
+                  </ul>
+                </nav>
+               
+                
+              </div><!-- /.Footer-copyright -->
+            </div><!-- /.col-lg-6 -->
+           </html>
